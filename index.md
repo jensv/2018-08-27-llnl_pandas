@@ -3,35 +3,12 @@ layout: lesson
 root: .
 ---
 
-This lesson is an introduction to programming in Python
-for people with little or no previous programming experience.
-It uses plotting as its motivating example,
-and is designed to be used in both [Data Carpentry]({{ site.dc_site }})
-and [Software Carpentry]({{ site.swc_site }}) workshops.
-This lesson references the Jupyter Notebook,
-but can be taught using a regular Python interpreter as well.
-Please note that this lesson uses Python 3 rather than Python 2.
+One of the strengths of python are the many libraries which make it useful for specific purposes: e.g. astropy for astrophysics, scikit-image for image processing, and pandas for data manipulation and analysis. 
+In particular, pandas provides tools for interacting with tables and time series.
 
-> ## Under Design
+> ## Attention new dataset
 >
-> **This lesson is currently in its early design stage;
-> please check [the design notes]({{ page.root }}/design/)
-> to see what we have so far.
-> Contributions are very welcome:
-> we would be particularly grateful for exercises
-> and for commentary on the ones already there.**
-{: .callout}
-
-> ## Prerequisites
->
-> 1.  Learners need to understand what files and directories are,
->     what a working directory is,
->     and how to start a Python interpreter.
->
-> 2. Learners must install Python before the class starts.
->
-> 3. Learners must get the gapminder data before class starts:
->    please download and unzip the file 
+>    Please download and unzip the gapminder data file before class starts. 
 >    [python-novice-gapminder-data.zip]({{page.root}}/files/python-novice-gapminder-data.zip).
 >
 >    Please see [the setup instructions]({{ page.root }}/setup/)
