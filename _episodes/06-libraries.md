@@ -59,7 +59,8 @@ Have to refer to each item with the module's name.
 
 ## Use introspection to learn about the contents of a library.
 
-*   Works just like help for a function.
+With introspection we can learn how to use a library even if we don't have access to a manual or online documentation.
+`help` provides an overview of the module just as it does for functions.
 
 ~~~
 help(math)
@@ -93,10 +94,96 @@ FUNCTIONS
 ~~~
 {: .output}
 
+
+With dir we can display all functions of a library. 
+The functions starting and ending with `___` are not intended for use by general users.
+
+~~~
+dir(math)
+~~~
+{: .python}
+~~~
+['__doc__',
+ '__file__',
+ '__loader__',
+ '__name__',
+ '__package__',
+ '__spec__',
+ 'acos',
+ 'acosh',
+ 'asin',
+ 'asinh',
+ 'atan',
+ 'atan2',
+ 'atanh',
+ 'ceil',
+ 'copysign',
+ 'cos',
+ 'cosh',
+ 'degrees',
+ 'e',
+ 'erf',
+ 'erfc',
+ 'exp',
+ 'expm1',
+ 'fabs',
+ 'factorial',
+ 'floor',
+ 'fmod',
+ 'frexp',
+ 'fsum',
+ 'gamma',
+ 'gcd',
+ 'hypot',
+ 'inf',
+ 'isclose',
+ 'isfinite',
+ 'isinf',
+ 'isnan',
+ 'ldexp',
+ 'lgamma',
+ 'log',
+ 'log10',
+ 'log1p',
+ 'log2',
+ 'modf',
+ 'nan',
+ 'pi',
+ 'pow',
+ 'radians',
+ 'sin',
+ 'sinh',
+ 'sqrt',
+ 'tan',
+ 'tanh',
+ 'tau',
+ 'trunc']
+~~~
+{: .output}
+
+If we are interested in a specific fucntion we can use `help` on that fucntion.
+
+
+~~~
+help(log)
+~~~
+{: .python}
+~~~
+Help on built-in function log in module math:
+
+log(...)
+    log(x[, base])
+    
+    Return the logarithm of x to the given base.
+    If the base not specified, returns the natural logarithm (base e) of x.
+~~~
+{: .output}
+
+
 ## Import specific items from a library module to shorten programs.
 
-*   Use `from ... import ...` to load only specific items from a library module.
-*   Then refer to them directly without library name as prefix.
+We use `from ... import ...` to load only specific items from a library module.
+Then we can refer to them directly without library name as prefix.
 
 ~~~
 from math import cos, pi
@@ -111,8 +198,8 @@ cos(pi) is -1.0
 
 ## Create an alias for a library module when importing it to shorten programs.
 
-*   Use `import ... as ...` to give a library a short *alias* while importing it.
-*   Then refer to items in the library using that shortened name.
+We use `import ... as ...` to give a library a short *alias* while importing it.
+Then we can refer to items in the library using that shortened name.
 
 ~~~
 import math as m
@@ -125,10 +212,9 @@ cos(pi) is -1.0
 ~~~
 {: .output}
 
-*   Commonly used for libraries that are frequently used or have long names.
+This is commonly used for libraries that are frequently used or have long names.
     *   E.g., `matplotlib` plotting library is often aliased as `mpl`.
-*   But can make programs harder to understand,
-    since readers must learn your program's aliases.
+But this can make programs harder to understand since readers must learn your program's aliases.
 
 > ## Exploring the Math Module
 >
