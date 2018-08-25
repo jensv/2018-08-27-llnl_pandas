@@ -18,14 +18,12 @@ keypoints:
 ---
 ## Most of the power of a programming language is in its libraries.
 
-*   A *library* is a collection of files (called *modules*) that contains
-    functions for use by other programs.
-    *   May also contain data values (e.g., numerical constants) and other things.
-    *   Library's contents are supposed to be related, but there's no way to enforce that.
-*   The Python [standard library][stdlib] is an extensive suite of modules that comes
-    with Python itself.
-*   Many additional libraries are available from [PyPI][pypi] (the Python Package Index).
-*   We will see later how to write new libraries.
+A *library* is a collection of files (called *modules*) that contains functions for use by other programs. 
+A Library may also contain data values (e.g., numerical constants) and other things.
+Library's contents are supposed to be related, but there's no way to enforce that.
+The Python [standard library][stdlib] is an extensive suite of modules that come with Python itself.
+Many additional libraries are available from [PyPI][pypi] (the Python Package Index).
+Scientific Python distributions like Anaconda or Enthought come with many useful Libraries.
 
 > ## Libraries and modules
 >
@@ -37,10 +35,10 @@ keypoints:
 
 ## A program must import a library module before using it.
 
-*   Use `import` to load a library module into a program's memory.
-*   Then refer to things from the module as `module_name.thing_name`.
+Use `import` to load a library module into a program's memory.
+Then refer to things from the module as `module_name.thing_name`.
     *   Python uses `.` to mean "part of".
-*   Using `math`, one of the modules in the standard library:
+Using `math`, one of the modules in the standard library:
 
 ~~~
 import math
@@ -55,11 +53,11 @@ cos(pi) is -1.0
 ~~~
 {: .output}
 
-*   Have to refer to each item with the module's name.
+Have to refer to each item with the module's name.
     *   `math.cos(pi)` won't work: the reference to `pi`
         doesn't somehow "inherit" the function's reference to `math`.
 
-## Use `help` to learn about the contents of a library module.
+## Use introspection to learn about the contents of a library.
 
 *   Works just like help for a function.
 
