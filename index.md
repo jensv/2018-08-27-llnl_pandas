@@ -8,8 +8,9 @@ In particular, pandas provides tools for interacting with tables and time series
 
 > ## Attention new dataset
 >
->    Please download and unzip the gapminder data file before class starts. 
->    [python-novice-gapminder-data.zip]({{page.root}}/files/python-novice-gapminder-data.zip).
+>
+>    Please download the `surveys.csv` file from the following link into your `data` directory.
+>    [https://ndownloader.figshare.com/files/2292172](https://ndownloader.figshare.com/files/2292172)
 >
 >    Please see [the setup instructions]({{ page.root }}/setup/)
 >    for details.

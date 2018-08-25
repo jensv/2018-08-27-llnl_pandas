@@ -73,11 +73,13 @@ If you run into any difficulties, please request help before the workshop begins
 
 ## Getting the Data
 
-The data we will be using is taken from the [gapminder][gapminder] dataset.
-To obtain it, download and unzip the file 
-[python-novice-gapminder-data.zip]({{page.root}}/files/python-novice-gapminder-data.zip).
-In order to follow the presented material, you should launch a Jupyter 
-notebook in the root directory (see [Starting Python](#Starting-Python)).
+For this lesson, we will be using the Portal Teaching data, a subset of the data
+from Ernst et al
+[Long-term monitoring and experimental manipulation of a Chihuahuan Desert ecosystem near Portal, Arizona, USA](http://www.esapubs.org/archive/ecol/E090/118/default.htm)
+
+We will be using files from the [Portal Project Teaching Database](https://figshare.com/articles/Portal_Project_Teaching_Database/1314459).
+This section will use the `surveys.csv` file that can be downloaded here:
+[https://ndownloader.figshare.com/files/2292172](https://ndownloader.figshare.com/files/2292172)
 
 ## Starting Python
 
