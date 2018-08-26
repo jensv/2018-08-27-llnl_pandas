@@ -17,8 +17,6 @@ objectives:
     - "Define indexing as it relates to data structures."
     - "Perform basic mathematical operations and summary statistics on data in a Pandas DataFrame."
     - "Create simple plots."
-keypoints:
-    - "FIXME"
 ---
 
 # Working With Pandas DataFrames in Python
@@ -29,17 +27,6 @@ over and over on different datasets that use a similar format. This makes our
 methods easily reproducible. We can also easily share our code with colleagues
 and they can replicate the same analysis.
 
-### Starting in the same spot
-
-To help the lesson run smoothly, let's ensure everyone is in the same directory.
-This should help us avoid path and file name issues. At this time please
-navigate to the workshop directory. If you working in IPython Notebook be sure
-that you start your notebook in the workshop directory.
-
-A quick aside that there are Python libraries like [OS
-Library](https://docs.python.org/3/library/os.html) that can work with our
-directory structure, however, that is not our focus today.
-
 ### Our Data
 
 For this lesson, we will be using the Portal Teaching data, a subset of the data
@@ -49,6 +36,7 @@ from Ernst et al
 We will be using files from the [Portal Project Teaching Database](https://figshare.com/articles/Portal_Project_Teaching_Database/1314459).
 This section will use the `surveys.csv` file that can be downloaded here:
 [https://ndownloader.figshare.com/files/2292172](https://ndownloader.figshare.com/files/2292172)
+Please place this file in the `data`
 
 We are studying the species and weight of animals caught in sites in our study
 area. The dataset is stored as a `.csv` file: each row holds information for a
@@ -85,11 +73,6 @@ record_id,month,day,year,plot_id,species_id,sex,hindfoot_length,weight
 
 ---
 
-## About Libraries
-A library in Python contains a set of tools (called functions) that perform
-tasks on our data. Importing a library is like getting a piece of lab equipment
-out of a storage locker and setting it up on the bench for use in a project.
-Once a library is set up, it can be used or called to perform many tasks.
 
 ## Pandas in Python
 One of the best options for working with tabular data in Python is to use the
@@ -98,24 +81,10 @@ Pandas library provides data structures, produces high quality plots with
 [matplotlib](http://matplotlib.org/) and integrates nicely with other libraries
 that use [NumPy](http://www.numpy.org/) (which is another Python library) arrays.
 
-Python doesn't load all of the libraries available to it by default. We have to
-add an `import` statement to our code in order to use library functions. To import
-a library, we use the syntax `import libraryName`. If we want to give the
-library a nickname to shorten the command, we can add `as nickNameHere`.  An
-example of importing the pandas library using the common nickname `pd` is below.
-
-
 ~~~
 import pandas as pd
 ~~~
 {: .language-python}
-
-Each time we call a function that's in a library, we use the syntax
-`LibraryName.FunctionName`. Adding the library name with a `.` before the
-function name tells Python where to find the function. In the example above, we
-have imported Pandas as `pd`. This means we don't have to type out `pandas` each
-time we call a Pandas function.
-
 
 # Reading CSV Data Using Pandas
 
@@ -489,7 +458,7 @@ summary stats.
 >> **A Snippet of the Output from challenge 3 looks like:**
 >>
 >> ~~~
->>  site
+>>  plot_id
 >>  1     count    1903.000000
 >>        mean       51.822911
 >>        std        38.176670
@@ -548,25 +517,19 @@ surveys_df['weight']*2
 
 We can plot our summary stats using Pandas, too.
 
+Let's look at how many animals were captured in each site:
 ~~~
 # Make sure figures appear inline in Ipython Notebook
 %matplotlib inline
 # Create a quick bar chart
-species_counts.plot(kind='bar');
-~~~
-{: .language-python}
-
-![Weight by Species Site](../fig/countPerSpecies.png)
-Count per species site
-
-We can also look at how many animals were captured in each site:
-
-~~~
 total_count = surveys_df.groupby('plot_id')['record_id'].nunique()
-# Let's plot that too
 total_count.plot(kind='bar');
 ~~~
 {: .language-python}
+
+![Weight by Species Site](../fig/02_bar_plot.png)
+Count per species site
+
 
 > ## Challenge - Plots
 >
