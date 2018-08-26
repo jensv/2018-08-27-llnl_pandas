@@ -15,8 +15,6 @@ objectives:
     - "Query /select a subset of data using a set of criteria using the following operators: =, !=, >, <, >=, <=."
     - "Locate subsets of data using masks."
     - "Describe BOOLEAN objects in Python and manipulate data using BOOLEANs."
-keypoints:
-    - "FIXME"
 ---
 
 In lesson 01, we read a CSV into a Python pandas DataFrame.  We learned:
@@ -294,8 +292,6 @@ surveys_df.loc[[0, 10], :]
 # What does this do?
 surveys_df.loc[0, ['species_id', 'plot_id', 'weight']]
 
-# What happens when you type the code below?
-surveys_df.loc[[0, 10, 35549], :]
 ~~~
 {: .language-python}
 
@@ -499,22 +495,6 @@ the mask as an index to subset our data as follows:
 surveys_df[pd.isnull(surveys_df).any(axis=1)]
 ~~~
 {: .language-python}
-
-Note that the `weight` column of our DataFrame contains many `null` or `NaN`
-values. We will explore ways of dealing with this in Lesson 03.
-
-We can run `isnull` on a particular column too. What does the code below do?
-
-~~~
-# What does this do?
-empty_weights = surveys_df[pd.isnull(surveys_df['weight'])]['weight']
-print(empty_weights)
-~~~
-{: .language-python}
-
-Let's take a minute to look at the statement above. We are using the Boolean
-object `pd.isnull(surveys_df['weight'])` as an index to `surveys_df`. We are
-asking Python to select rows that have a `NaN` value of weight.
 
 
 > ## Challenge - Putting it all together
