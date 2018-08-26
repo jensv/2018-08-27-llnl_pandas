@@ -18,11 +18,10 @@ keypoints:
 ---
 ## Most of the power of a programming language is in its libraries.
 
-A *library* is a collection of files (called *modules*) that contains functions for use by other programs. 
-A Library may also contain data values (e.g., numerical constants) and other things.
-Library's contents are supposed to be related, but there's no way to enforce that.
-The Python [standard library][stdlib] is an extensive suite of modules that come with Python itself.
-Many additional libraries are available from [PyPI][pypi] (the Python Package Index).
+A library in Python contains a set of tools (called functions) that perform
+tasks on our data. Importing a library is like getting a piece of lab equipment
+out of a storage locker and setting it up on the bench for use in a project.
+Once a library is set up, it can be used or called to perform many tasks.
 Scientific Python distributions like Anaconda or Enthought come with many useful Libraries.
 
 > ## Libraries and modules
@@ -35,9 +34,14 @@ Scientific Python distributions like Anaconda or Enthought come with many useful
 
 ## A program must import a library module before using it.
 
-Use `import` to load a library module into a program's memory.
-Then refer to things from the module as `module_name.thing_name`.
-    *   Python uses `.` to mean "part of".
+Python doesn't load all of the libraries available to it by default. We have to
+add an `import` statement to our code in order to use library functions. To import
+a library, we use the syntax `import libraryName`.
+Each time we call a function that's in a library, we use the syntax
+`LibraryName.FunctionName`. 
+Adding the library name with a `.` before the
+function name tells Python where to find the function. 
+Then refer to things from the module as `libraryName.thing_name`.
 Using `math`, one of the modules in the standard library:
 
 ~~~
